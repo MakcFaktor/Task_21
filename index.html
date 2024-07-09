@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo List with Modal</title>
+    <link
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+            rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="container">
+    <h2>ToDo List</h2>
+    <ul class="list-group" id="todo-list">
+        <li
+                class="list-group-item"
+                data-toggle="modal"
+                data-target="#taskModal"
+                data-task="Завдання 1 деталі"
+        >
+            Завдання 1
+        </li>
+        <li
+                class="list-group-item"
+                data-toggle="modal"
+                data-target="#taskModal"
+                data-task="Завдання 2 деталі"
+        >
+            Завдання 2
+        </li>
+        <li
+                class="list-group-item"
+                data-toggle="modal"
+                data-target="#taskModal"
+                data-task="Завдання 3 деталі"
+        >
+            Завдання 3
+        </li>
+    </ul>
+</div>
+
+<!-- Modal -->
+<div
+        class="modal fade"
+        id="taskModal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="taskModalLabel"
+        aria-hidden="true"
+>
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="taskModalLabel">Ваше завдання</h5>
+                <button
+                        type="button"
+                        class="close"
+                        data-dismiss="modal"
+                        aria-label="Close"
+                >
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="task-text"></div>
+            <div class="modal-footer">
+                <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-dismiss="modal"
+                >
+                    Закрити
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="dist/script.js"></script>
+</body>
+</html>
